@@ -1,0 +1,29 @@
+import common as co
+import dublincore as dc
+
+schema resource with prefix res {
+   type String /* The type of the resource */
+   path String
+   /* The unique id for that type of resource in the given path 
+   */
+   id   String
+}
+
+schema empty
+
+
+
+document Employee {
+   common
+   resource
+   dublincore
+   employee {
+   
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+        secondName String,
+	lastName String,
+   }	
+}
